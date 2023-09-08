@@ -1,0 +1,183 @@
+@import './common';
+
+.backdrop {
+  background: $color-violet;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+}
+
+.modal {
+  position: relative;
+  margin: 200px auto;
+  padding: 80px 40px 40px;
+  max-width: 579px;
+
+  border-radius: 18px;
+  border: 2px solid var(--close-modal-btn);
+  color: $color-black-alfa;
+  background: var(--background-modal);
+
+  @include font-auth;
+  .close-modal-btn {
+    position: absolute;
+    cursor: pointer;
+    right: 18px;
+    top: 18px;
+    background-color: transparent;
+    border: none;
+  }
+  .close-modal-svg {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    use {
+      fill: var(--close-modal-btn);
+    }
+  }
+  .form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  input {
+    display: flex;
+    width: 100%;
+    padding: 20px 20px 20px 40px;
+    align-items: center;
+
+    border-radius: 40px;
+    border: 2px solid $color-black;
+
+    &:placeholder-shown {
+      @include font-auth;
+      color: var(--cl-lg-md-inpt-txt);
+    }
+    // &:valid {
+    //   /* outline: rgba(0,0,0,0); */
+    //   box-shadow: 0 0 3px 2px #82eb9b, 0 0 #82eb9b, 0 0 12px 1px #82eb9b;
+    // }
+  }
+  label {
+    position: relative;
+    // margin-top: 28px;
+    input {
+      color: var(---text-input);
+      background-color: var(--background-input);
+      border-color: var(--border-input);
+    }
+  }
+  svg.eye {
+    width: 36px;
+    height: 30px;
+    top: 18px;
+    cursor: pointer;
+  }
+
+  .modal-svg {
+    position: absolute;
+    fill: var(--background-btn-sign);
+    right: 18px;
+    top: -42px;
+  }
+  .btn {
+    cursor: pointer;
+    margin-top: 12px;
+    display: flex;
+    padding: 20px 0px;
+    justify-content: center;
+    align-items: flex-start;
+
+    color: var(--text-btn-sign);
+    @include font-auth;
+
+    border-radius: 40px;
+    background: var(--background-btn-sign);
+    &:hover,
+    &:focus {
+      color: var(--text-btn-sign-hover);
+      background-color: #4f2ee8;
+    }
+  }
+  .list-auth {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .modal-svg-login {
+    width: 50px;
+    height: 50px;
+  }
+
+  .js-button {
+    color: $color-grey;
+  }
+}
+
+.modal-sign-in {
+  height: 445px;
+}
+@media only screen and (max-width: 768px) {
+  .modal {
+    margin: 127px auto;
+    padding: 80px 40px 40px;
+    max-width: 500px;
+    height: auto;
+    input {
+      padding: 15px 15px 15px 35px;
+      align-items: center;
+
+      border-radius: 40px;
+      border: 2px solid $color-black;
+
+      &:placeholder-shown {
+        @include font-auth;
+        color: $color-black;
+      }
+    }
+    .modal-svg {
+      fill: var(--background-btn-sign);
+      position: absolute;
+      right: 18px;
+      top: -47px;
+    }
+    .modal-svg-login {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+.wrapper-button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  button {
+    color: $color-black-alfa;
+    @include font-auth;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    line-height: 0.8;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid $color-violet;
+      color: $color-violet;
+    }
+
+    .active {
+      color: $color-violet;
+    }
+  }
+}
