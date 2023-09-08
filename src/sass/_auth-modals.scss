@@ -21,7 +21,7 @@
   color: $color-black-alfa;
   background: var(--background-modal);
 
-  @include font-auth;
+  // @include font-auth;
   .close-modal-btn {
     position: absolute;
     cursor: pointer;
@@ -54,7 +54,7 @@
     border: 2px solid $color-black;
 
     &:placeholder-shown {
-      @include font-auth;
+      // @include font-auth;
       color: var(--cl-lg-md-inpt-txt);
     }
     // &:valid {
@@ -93,7 +93,7 @@
     align-items: flex-start;
 
     color: var(--text-btn-sign);
-    @include font-auth;
+    // @include font-auth;
 
     border-radius: 40px;
     background: var(--background-btn-sign);
@@ -139,7 +139,7 @@
       border: 2px solid $color-black;
 
       &:placeholder-shown {
-        @include font-auth;
+        // @include font-auth;
         color: $color-black;
       }
     }
@@ -163,7 +163,7 @@
 
   button {
     color: $color-black-alfa;
-    @include font-auth;
+    // @include font-auth;
     background: transparent;
     border: none;
     padding: 0;

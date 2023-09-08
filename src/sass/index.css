@@ -1,4 +1,5 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
+@import '../../node_modules/modern-normalize/modern-normalize.css';
+@import '../../node_modules/modern-normalize/modern-normalize.css';
 a {
   text-decoration: none;
   color: inherit;
@@ -116,6 +117,224 @@ body {
   font-weight: 700;
   src: url("../fonts/dm-sans-v14-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+body {
+  font-family: DM Sans;
+  font-style: normal;
+  color: var(--main-text-clr);
+  background-color: var(--background-clr);
+  transition: background-color 100ms linear;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 375px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1439px) {
+  .container {
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+    min-width: 768px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .container {
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    min-width: 1440px;
+  }
+}
+
+.backdrop {
+  background: rgb(79, 46, 232);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+}
+
+.modal {
+  position: relative;
+  margin: 200px auto;
+  padding: 80px 40px 40px;
+  max-width: 579px;
+  border-radius: 18px;
+  border: 2px solid var(--close-modal-btn);
+  color: rgba(17, 17, 17, 0.5);
+  background: var(--background-modal);
+}
+.modal .close-modal-btn {
+  position: absolute;
+  cursor: pointer;
+  right: 18px;
+  top: 18px;
+  background-color: transparent;
+  border: none;
+}
+.modal .close-modal-svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+.modal .close-modal-svg use {
+  fill: var(--close-modal-btn);
+}
+.modal .form-login {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.modal input {
+  display: flex;
+  width: 100%;
+  padding: 20px 20px 20px 40px;
+  align-items: center;
+  border-radius: 40px;
+  border: 2px solid #111111;
+}
+.modal input:-moz-placeholder-shown {
+  color: var(--cl-lg-md-inpt-txt);
+}
+.modal input:placeholder-shown {
+  color: var(--cl-lg-md-inpt-txt);
+}
+.modal label {
+  position: relative;
+}
+.modal label input {
+  color: var(---text-input);
+  background-color: var(--background-input);
+  border-color: var(--border-input);
+}
+.modal svg.eye {
+  width: 36px;
+  height: 30px;
+  top: 18px;
+  cursor: pointer;
+}
+.modal .modal-svg {
+  position: absolute;
+  fill: var(--background-btn-sign);
+  right: 18px;
+  top: -42px;
+}
+.modal .btn {
+  cursor: pointer;
+  margin-top: 12px;
+  display: flex;
+  padding: 20px 0px;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--text-btn-sign);
+  border-radius: 40px;
+  background: var(--background-btn-sign);
+}
+.modal .btn:hover, .modal .btn:focus {
+  color: var(--text-btn-sign-hover);
+  background-color: #4f2ee8;
+}
+.modal .list-auth {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.modal .modal-svg-login {
+  width: 50px;
+  height: 50px;
+}
+.modal .js-button {
+  color: #b4afaf;
+}
+
+.modal-sign-in {
+  height: 445px;
+}
+
+@media only screen and (max-width: 768px) {
+  .modal {
+    margin: 127px auto;
+    padding: 80px 40px 40px;
+    max-width: 500px;
+    height: auto;
+  }
+  .modal input {
+    padding: 15px 15px 15px 35px;
+    align-items: center;
+    border-radius: 40px;
+    border: 2px solid #111111;
+  }
+  .modal input:-moz-placeholder-shown {
+    color: #111111;
+  }
+  .modal input:placeholder-shown {
+    color: #111111;
+  }
+  .modal .modal-svg {
+    fill: var(--background-btn-sign);
+    position: absolute;
+    right: 18px;
+    top: -47px;
+  }
+  .modal .modal-svg-login {
+    width: 45px;
+    height: 45px;
+  }
+}
+.wrapper-button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.wrapper-button button {
+  color: rgba(17, 17, 17, 0.5);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0.8;
+}
+.wrapper-button button:hover, .wrapper-button button:focus {
+  border-bottom: 1px solid rgb(79, 46, 232);
+  color: rgb(79, 46, 232);
+}
+.wrapper-button button .active {
+  color: rgb(79, 46, 232);
+}
+
 .category-title,
 .category-list {
   font-size: 16px;

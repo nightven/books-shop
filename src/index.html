@@ -5,41 +5,40 @@
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookshelf</title>
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
     />
-
     <link rel="stylesheet" href="./sass/index.scss" />
   </head>
-
   <body>
-    <include src="./partials/header/header.html"></include>
-
+    <!-- header section -->
+    <load ="./partials/header/header.html">
     <main>
       <div class="container">
         <section class="container-home-page">
           <aside class="aside-wrapper">
-            <include src="./partials/category/category-list.html"></include>
-            <include src="./partials/fonds/fonds.html"></include>
+            <load ="./partials/category/category-list.html" />
+            <load ="./partials/fonds/fonds.html" />
           </aside>
-
+            <!-- home page content -->
           <section class="home-content">
-            <include src="./partials/home-page/home-page.html"></include>
+            <load ="./partials/home-page/home-page.html" />
           </section>
         </section>
       </div>
     </main>
 
-    <include src="./partials/footer/footer.html"></include>
-
     <!-- modal authorization -->
-    <include src="./partials/modals/auth-modal.html"></include>
+    <load ="./partials/modals/auth-modal.html" />
     <!-- menu-burger -->
-    <include src="./partials/modals/menu-burger.html"></include>
-    <include src="./partials/home-page/scroll-up.html"></include>
+    <load ="./partials/modals/menu-burger.html" />
+    <!-- scroll up -->
+    <load ="./partials/home-page/scroll-up.html" />
 
+    <!-- footer section -->
+    <load ="./partials/footer/footer.html" />
+    <!-- scripts -->
     <script type="module" src="index.js"></script>
   </body>
 </html>
