@@ -28,3 +28,47 @@
     @content;
   }
 }
+
+//fonts
+@mixin font-modal-btn {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.33; /* 133.333% */
+  letter-spacing: -0.18px;
+  text-transform: uppercase;
+}
+@mixin font-title {
+  font-family: DM Sans;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.08; /* 108.333% */
+  letter-spacing: -1.92px;
+}
+@mixin font($fs, $fw, $lh, $lc: 0.02em) {
+  font-family: DM Sans;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh/$fs;
+  letter-spacing: $lc;
+  font-style: normal;
+}
+
+//display
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin flex($display, $content, $align) {
+  display: $display;
+  justify-content: $content;
+  align-items: $align;
+}
