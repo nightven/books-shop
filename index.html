@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" crossorigin src="/vanilla-app-template/assets/index-57867a46.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <h1>Hello</h1>
+    <a href="./shop-list.html">Shop list/a>
+      <!-- Loads the specified .html file -->
+		<header class="header">
+  <div class="container header-container">
+    <!-- Logo,  -->
+    <nav class="header-nav">
+      <a class="logo link" href="."
+        ><svg class="" width="24" height="24">
+          <use href="/src/images/icons.svg#icon-logo"></use></svg
+        ><svg class="bookshelf-logo" width="77" height="13">
+          <use href="/src/images/icons.svg#icon-Bookshelf"></use></svg
+      ></a>
+      <!-- icon-Bookshelf -->
+      <!-- HOME, SHOPPING LIST -->
+      <ul class="header-nav-list  list authorized display-none">
+        <li>
+          <a class="header-nav-list-item home current link" href=".">HOME</a>
+        </li>
+        <li>
+          <a class="header-nav-list-item shop link" href="/src/shopping-list.html"
+            >SHOPPING LIST<svg class="bin-icon" width="20" height="20">
+              <use href="/src/images/icons.svg#icon-cart"></use></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- switcher -->
+    <div class="switcher-wrrap">
+      <label class="switch">
+        <input type="checkbox" class="switch__input" />
+        <span class="switch__slider"></span>
+      </label>
+
+      <button
+        id="burger-btn"
+        class="menu-toggle"
+        aria-expanded="true"
+        data-menu-burger-open
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!-- checkbox, Sign up, Menu-burger -->
+
+    <div >
+      <div class="authorized display-none">
+        <!-- Вміст для авторизованих користувачів -->
+        <button type="button" class="js-button button-user hidden-mob">
+          <span class="icon-wrapper"
+            ><svg class="user-icon" width="19" height="19">
+              <use href="/src/images/icons.svg#icon-user"></use></svg
+          ></span>
+          <span class="js-login-user"></span
+          ><svg class="" width="28" height="28">
+            <use href="/src/images/icons.svg#icon-caret-down"></use>
+          </svg>
+        </button>
+        <button id="logout" type="button" class="button-log-out hidden-mob">
+          Log out<svg class="svg-button-log-out" width="20" height="20">
+            <use href="/src/images/icons.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <div>
+        <!-- Вміст для неавторизованих користувачів -->
+        <button
+          id="login"
+          type="button"
+          class="js-button button-sign-up hidden-mob unauthorized"
+          data-sign-up-open
+        >
+          Sign up<svg class="" width="20" height="20">
+            <use href="/src/images/icons.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+        <!-- <button id="login">Увійти</button> -->
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+  </body>
+</html>
