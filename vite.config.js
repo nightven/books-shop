@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import { glob } from 'glob';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
+import { ghPages } from "vite-plugin-gh-pages";
 
 export default defineConfig({
 	root: 'src',
@@ -12,5 +13,6 @@ export default defineConfig({
 	  },
 	  outDir: '../dist',
 	},
-  plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
+	base: "/books-shop/",
+  plugins: [injectHTML(), FullReload(['./src/**/**.html']), ghPages()],
 });
